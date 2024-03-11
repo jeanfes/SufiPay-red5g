@@ -1,13 +1,29 @@
 import PropTypes from "prop-types";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./dynamicTable.scss";
 import { Select } from "@mui/material";
 import { MenuItem } from "@mui/material";
+import IconBottomArrow from "../../assets/ArrowBottom.png";
+import IconLeftArrow from "../../assets/ArrowLeft.png";
+import IconRightArrow from "../../assets/ArrowRight.png";
+import InputAdornment from "@mui/material/InputAdornment";
+import "aos/dist/aos.css";
+import "./dynamicTable.scss";
+import AOS from "aos";
 AOS.init();
 
-export const DynamicTable = ({ rowsPerPage, page, setRowsPerPage, setPage }) => {
+export const DynamicTable = ({ data, rowsPerPage, page, setRowsPerPage, setPage }) => {
     const itemperpage = [5, 10, 15, 20, 25, 30]
+
+    const handleNextPage = () => {
+        console.log(data?.length, page);
+        if (page === data?.length) return
+        setPage(page + 1)
+    }
+
+    const handleBackPage = () => {
+        if (page === 1) return
+        setPage(page - 1)
+    }
+
     return (
         <>
             <table className="dynamicTable">
@@ -84,22 +100,43 @@ export const DynamicTable = ({ rowsPerPage, page, setRowsPerPage, setPage }) => 
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="800">
-                <Select
-                    value={page}
-                    onChange={(e) => setRowsPerPage(e.target.value)}
-                >
-                    {itemperpage.map((item, index) => (
-                        <MenuItem key={index} value={item}>{item}</MenuItem>
-                    ))}
-                </Select>
+                <div className="containerNextBackButtons">
+                    <button onClick={handleBackPage}>
+                        <img src={IconLeftArrow} alt="" />
+                    </button>
+                    <label htmlFor="">
+                        <input value={page} type="text" name="" id="" />
+                        <p>{`de ${data?.length}`}</p>
+                    </label>
+                    <button onClick={handleNextPage}>
+                        <img src={IconRightArrow} alt="" />
+                    </button>
+                </div>
+                <label className="containerRowsPerPage">
+                    <span>
+                        <p>Registros por página</p>
+                        <p>{rowsPerPage}</p>
+                    </span>
+                    <Select
+                        sx={{ border: "none" }}
+                        value={""}
+                        onChange={(e) => setRowsPerPage(e.target.value)}
+                        endAdornment={<InputAdornment sx={{ position: "absolute", right: "20px", pointerEvents: "none" }} position="end"><img src={IconBottomArrow} alt="" /></InputAdornment>}
+                    >
+                        {itemperpage.map((item, index) => (
+                            <MenuItem key={index} value={item}>{item}</MenuItem>
+                        ))}
+                    </Select>
+                </label>
             </div>
         </>
     )
 }
 
 DynamicTable.propTypes = {
+    data: PropTypes.array.isRequired,
     rowsPerPage: PropTypes.number.isRequired,
     page: PropTypes.number.isRequired,
     setRowsPerPage: PropTypes.func.isRequired,
     setPage: PropTypes.func.isRequired
-};
+}

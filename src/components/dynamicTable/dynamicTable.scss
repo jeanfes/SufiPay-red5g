@@ -7,7 +7,7 @@
         background-color: var(--blue_3_-f1f6fb);
 
         th {
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: 14px;
             font-weight: bold;
             text-align: left;
@@ -21,7 +21,7 @@
 
     tbody {
         td {
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: 14px;
             font-weight: normal;
             text-align: left;
@@ -31,6 +31,9 @@
 }
 
 .paginationTable {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 16px #AAAAAA4D;
     border-radius: 24px 24px 0px 0px;
@@ -40,6 +43,92 @@
     bottom: 0;
     min-width: 500px;
     min-height: 80px;
-    left: calc(50% - 250px);
+    left: calc(50% - 285px);
     transform: translateX(-50%);
+
+    .containerNextBackButtons {
+        display: flex;
+        flex-direction: row;
+
+        label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            color: var(--blue_3_-1a2e3b);
+            margin: 0px 10px;
+
+            input {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #ABB9C780;
+                border-radius: 6px;
+                display: flex;
+                font-size: 16px;
+                font-family: "Open Sans", sans-serif;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        button {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--blue_3_-1a2e3b);
+            cursor: pointer;
+        }
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    svg {
+        display: none;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .containerRowsPerPage {
+        border: 1px solid #ABB9C780;
+        border-radius: 6px;
+        padding: 0px 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            p:first-child {
+                font-family: "Open Sans", sans-serif;
+                color: #61616180;
+                font-size: 12px;
+            }
+
+            p:last-child {
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                color: var(--blue_3_-1a2e3b);
+            }
+        }
+    }
 }
