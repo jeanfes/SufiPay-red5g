@@ -1,0 +1,23 @@
+.dynamicButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 14px 24px;
+    background-color: var(--red_1_-dd3542);
+    border: 2px solid transparent;
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0px 18px;
+    }
+}
+
+.dynamicButton:hover {
+    background-color: white;
+    color: var(--red_1_-dd3542);
+    border: 2px solid var(--red_1_-dd3542);
+}

@@ -1,0 +1,39 @@
+header {
+    display: grid;
+    padding: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 16px #D1E8FF74;
+    height: auto;
+    min-height: 72px;
+
+    picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2;
+        align-self: center;
+    }
+
+    #buttonLogOut {
+        display: flex;
+        flex-direction: row;
+        grid-column: 3;
+        align-self: center;
+        justify-self: flex-end;
+        background-color: transparent;
+
+        p {
+            color: black;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

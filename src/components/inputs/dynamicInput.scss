@@ -1,0 +1,26 @@
+.dynamicInput {
+    width: 100%;
+    padding: 8px 14px 8px;
+    border-radius: 6px;
+
+    .focused {
+        color: var(--red_1_-dd3542);
+    }
+
+    p {
+        font-size: 12px;
+        text-align: left;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: var(--azul-plomo-50-);
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        color: var(---413e4d-input-color);
+    }
+}

@@ -1,0 +1,132 @@
+.mainContainerLogin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    svg {
+        z-index: -1;
+    }
+
+    .loginSection {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 16px;
+
+        #containerLogoSufi {
+            max-width: 270px;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .containerTitleLogin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+
+            h2 {
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 1.5;
+                color: var(---413e4d-input-color);
+                text-align: center;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1.5;
+                color: var(---413e4d-input-color);
+                text-align: center;
+            }
+        }
+
+        .containerInputsLogin {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 16px #00000029;
+            border-radius: 12px;
+            gap: 12px;
+
+            #iconDotRed1 {
+                position: absolute;
+                background-size: contain;
+                top: 30px;
+                left: -140px;
+            }
+
+            #groupsDotsBlack1 {
+                position: absolute;
+                background-size: contain;
+                top: -80px;
+                left: -100px;
+            }
+        }
+
+        .containerButtonsLogin {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+
+            a {
+                font-size: 12px;
+                color: var(---413e4d-input-color);
+            }
+
+            #iconDotRed2 {
+                position: absolute;
+                background-size: contain;
+                bottom: 40px;
+                right: -120px;
+            }
+
+            #groupsDotsBlack2 {
+                position: absolute;
+                background-size: contain;
+                bottom: -20px;
+                right: -120px;
+            }
+        }
+    }
+
+    #containerFigure1 {
+        position: absolute;
+        top: -130px;
+        right: -275px;
+        z-index: -1;
+    }
+
+    #containerFigure2 {
+        position: absolute;
+        bottom: -340px;
+        left: -240px;
+        z-index: -1;
+    }
+}
