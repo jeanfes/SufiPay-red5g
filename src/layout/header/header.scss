@@ -20,15 +20,22 @@ header {
     }
 
     #buttonLogOut {
+        cursor: pointer;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         grid-column: 3;
         align-self: center;
         justify-self: flex-end;
         background-color: transparent;
+        gap: 12px;
+        border: 0;
 
         p {
             color: black;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         img {

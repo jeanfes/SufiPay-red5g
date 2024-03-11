@@ -24,9 +24,9 @@ export const DynamicInput = ({ name = "name", type, getFieldProps, errors, touch
 }
 
 DynamicInput.propTypes = {
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    getFieldProps: PropTypes.func.isRequired,
-    errors: PropTypes.object.isRequired,
-    touched: PropTypes.object.isRequired
+    name: PropTypes.string,
+    type: PropTypes.string,
+    getFieldProps: PropTypes.func,
+    errors: PropTypes.object,
+    touched: PropTypes.object
 };

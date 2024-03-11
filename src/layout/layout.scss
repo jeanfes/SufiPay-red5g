@@ -5,7 +5,11 @@
     grid:
         "header" auto "main" 1fr "." auto / 1fr;
 
-    header {
+    .headerDashboard {
         grid-area: header;
+    }
+
+    .mainDashboard {
+        grid-area: main;
     }
 }

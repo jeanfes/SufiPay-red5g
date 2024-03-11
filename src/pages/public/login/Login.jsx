@@ -1,17 +1,17 @@
 import { useEffect } from "react";
-import { DynamicInput } from "../../../components/inputs/DynamicInput";
-import { DynamicButton } from "../../../components/buttons/DynamicButton";
+import { DynamicInput } from "../../../components/dynamicInput/DynamicInput";
+import { DynamicButton } from "../../../components/dynamicButton/DynamicButton";
 import { LogoSufi } from "../../../assets/LogoSufi";
 import { IconDotRed } from "../../../assets/IconDotRed";
 import { Figure1 } from "../../../assets/Figure1";
 import { GroupDotsBlack } from "../../../assets/GroupDotsBlack";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import "./login.scss";
-import * as Yup from 'yup';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import * as Yup from "yup";
 import { useFormik } from "formik";
+import "./login.scss";
 AOS.init();
 
 const Login = () => {
@@ -63,7 +63,7 @@ const Login = () => {
                         data-aos="fade-right"
                         data-aos-anchor="#example-anchor"
                         data-aos-offset="500"
-                        data-aos-duration="700"
+                        data-aos-duration="800"
                         id="iconDotRed1">
                         <IconDotRed />
                     </picture>
@@ -71,7 +71,7 @@ const Login = () => {
                         data-aos="fade-right"
                         data-aos-anchor="#example-anchor"
                         data-aos-offset="500"
-                        data-aos-duration="700"
+                        data-aos-duration="800"
                         id="groupsDotsBlack1">
                         <GroupDotsBlack />
                     </picture>
@@ -83,7 +83,7 @@ const Login = () => {
                         data-aos="fade-left"
                         data-aos-anchor="#example-anchor"
                         data-aos-offset="500"
-                        data-aos-duration="700"
+                        data-aos-duration="800"
                         id="iconDotRed2">
                         <IconDotRed />
                     </picture>
@@ -91,7 +91,7 @@ const Login = () => {
                         data-aos="fade-left"
                         data-aos-anchor="#example-anchor"
                         data-aos-offset="500"
-                        data-aos-duration="700"
+                        data-aos-duration="800"
                         id="groupsDotsBlack2">
                         <GroupDotsBlack />
                     </picture>
