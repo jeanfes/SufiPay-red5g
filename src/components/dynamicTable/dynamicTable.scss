@@ -38,12 +38,13 @@
     box-shadow: 0px 3px 16px #AAAAAA4D;
     border-radius: 24px 24px 0px 0px;
     padding: 12px;
+    border: 1px solid #ABB9C780;
     position: fixed;
     z-index: 999;
-    bottom: 0;
+    bottom: -70px;
     min-width: 500px;
     min-height: 80px;
-    left: calc(50% - 285px);
+    left: calc(50%);
     transform: translateX(-50%);
 
     .containerNextBackButtons {
@@ -131,4 +132,9 @@
             }
         }
     }
+}
+
+.showPagination {
+    bottom: 0px;
+    transition: bottom 0.5s;
 }

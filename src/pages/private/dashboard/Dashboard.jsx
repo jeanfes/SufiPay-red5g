@@ -68,6 +68,14 @@ const data = [
     }
 ];
 
+const columns = [
+    { id: "fechaYHora", label: "Fecha y hora" },
+    { id: "numeroDeOperacion", label: "Número de Operación" },
+    { id: "tipoDeDocumento", label: "Tipo de Documento" },
+    { id: "numeroDeDocumento", label: "Número de Documento" },
+    { id: "monto", label: "Monto" }
+];
+
 const Dashboard = () => {
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [page, setPage] = useState(1);
@@ -110,7 +118,7 @@ const Dashboard = () => {
                         <MenuItem value={0}>Hasta</MenuItem>
                     </Select>
                 </div>
-                <DynamicTable data={data} rowsPerPage={rowsPerPage} page={page} setRowsPerPage={setRowsPerPage} setPage={setPage} />
+                <DynamicTable columns={columns} data={data} rowsPerPage={rowsPerPage} page={page} setRowsPerPage={setRowsPerPage} setPage={setPage} />
             </section>
         </main>
     )
